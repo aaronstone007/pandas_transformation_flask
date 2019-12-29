@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Params</title>
+</head>
+<body>
+<center>
+<h4>Select columns to split</h4>
+<form action="{{ url_for('get_split_val') }}" method="post">
+  {% for title in split_titles %}
+    <input type="checkbox" name="split" value="{{title}}">{{ title }}
+  {% endfor %}<br><br>
+   <button type="submit" name="button">Submit</button>
+</form>
+<br>
+</center>
+</body>
+</html>

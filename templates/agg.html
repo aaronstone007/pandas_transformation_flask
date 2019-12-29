@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Params</title>
+</head>
+<body>
+<center>
+<h4>Enter Following Params</h4>
+<form action="{{ url_for('get_agg_val') }}" method="post">
+  <label>Group By</label>&nbsp;
+  <input type="text" name="groupby"><br><br>
+  <h4>Select columns to aggregate</h4>
+  {% for title in agg_titles %}
+    <input type="checkbox" name="agg" value="{{title}}">{{ title }}
+  {% endfor %}<br><br>
+   <button type="submit" name="button">Submit</button>
+</form>
+<br>
+</center>
+</body>
+</html>

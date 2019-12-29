@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+<center>
+<h4>Split Sample</h4>
+{% for table in split_tables %}
+  {{ table|safe }}
+{% endfor %}
+<br>
+<button><a href="/getSplit">Download CSV</a></button>
+</center>
+</body>
+</html>

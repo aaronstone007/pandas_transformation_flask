@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+  <center>
+<h4>Sample Data from Uploaded file</h4>
+{% for table in sample_tables %}
+  {{ table|safe }}
+{% endfor %}
+
+<br>
+<button><a href="/agg">Aggregated</a></button>&nbsp;
+<button><a href="/split">Split</a></button>
+</center>
+</body>
+</html>
